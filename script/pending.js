@@ -4,6 +4,7 @@ module.exports.config = {
 	hasPermssion: 2,
 	credits: "NTKhang",
 	description: "config bot!",
+	usePrefix: false,
 	commandCategory: "admin",
 	cooldowns: 5
 };
