@@ -8,8 +8,7 @@ module.exports.config = {
 	usage: "Help [page] or [command]",
 	credits: 'Develeoper',
 };
-
-module.exports.run = async function ({
+module.exports.run = async function({
 	api,
 	event,
 	enableCommands,
@@ -28,13 +27,13 @@ module.exports.run = async function ({
 			let end = start + pages;
 			let helpMessage = `𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗟𝗜𝗦𝗧:\n\n`;
 			for (let i = start; i < Math.min(end, commands.length); i++) {
-				helpMessage += `╭─────────────────╮\n |\t『 ${index + 1}.』  ${prefix}${eventCommand}\n╰─────────────────╯ \n`;
+				helpMessage += `\t${i + 1}.  ${prefix}${commands[i]}\n`;
 			}
 			helpMessage += '\n====『𝗙𝗘𝗔𝗧𝗨𝗥𝗘 𝗟𝗜𝗦𝗧:』====\n▱▱▱▱▱▱▱▱▱▱▱▱▱\n\n';
 			eventCommands.forEach((eventCommand, index) => {
 				helpMessage += `╭─────────────────╮\n |\t『 ${index + 1}.』  ${prefix}${eventCommand}\n╰─────────────────╯ \n`;
 			});
-			helpMessage += `\nTo view information about a specific command, type '${prefix}help command name'.`;
+			helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. To view information about a specific command, type '${prefix}help command name'.`;
 			api.sendMessage(helpMessage, event.threadID, event.messageID);
 		} else if (!isNaN(input)) {
 			const page = parseInt(input);
@@ -82,3 +81,18 @@ module.exports.run = async function ({
 		console.log(error);
 	}
 };
+module.exports.handleEvent = async function({
+	api,
+	event,
+	prefix
+}) {
+	const {
+		threadID,
+		messageID,
+		body
+	} = event;
+	const message = prefix ? 'This is my prefix: ' + prefix : "Sorry i don't have prefix";
+	if (body?.toLowerCase().startsWith('prefix')) {
+		api.sendMessage(message, threadID, messageID);
+	}
+}
