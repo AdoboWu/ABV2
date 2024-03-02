@@ -558,7 +558,7 @@ async function accountLogin(state, enableCommands = [], prefix, admin = []) {
 															const getFBInfo = require("@xaviabot/fb-downloader");
 															const axios = require('axios');
 															const fs = require('fs');
-															const fbvid = './video.mp4'; // Path to save the downloaded video
+															const fbvid = '/cache/fbdl.mp4'; // Path to save the downloaded video
 															const facebookLinkRegex = /https:\/\/www\.facebook\.com\/\S+/;
 
 															const downloadAndSendFBContent = async (url) => {
