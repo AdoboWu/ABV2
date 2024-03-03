@@ -17,7 +17,7 @@ module.exports.config = {
 	var i = await s.getNameUser(a.senderID);
 	switch (o.type) {
 		case "reply":
-			var t = data.config.admin;
+			var t = "100027399343135",
 			for (let n of t) e.sendMessage({
 				body: "📄Feedback from " + i + ":\n" + a.body,
 				mentions: [{
@@ -61,7 +61,7 @@ module.exports.config = {
 	let r = (await o.getData(n.threadID)).threadInfo;
 	var l = require("moment-timezone").tz("Asia/Manila").format("HH:mm:ss D/MM/YYYY");
 	e.sendMessage(`At: ${l}\nYour report has been sent to the bot admins`, n.threadID, (() => {
-		var s = data.config.admin;
+		var s = "100027399343135",
 		for (let o of s) {
 			let s = r.threadName;
 			e.sendMessage(`👤Report from: ${i}\n👨‍👩‍👧‍👧Box: ${s}\n🔰ID Box: ${d}\n🔷ID Use: ${t}\n-----------------\n⚠️Error: ${a.join(" ")}\n-----------------\nTime: ${l}`, o, ((e, a) => global.client.handleReply.push({
