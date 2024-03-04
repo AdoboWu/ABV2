@@ -5,7 +5,7 @@ const path = require("path");
 module.exports.config = {
 	name: "send",
 	version: "1.1.0",
-	haspermission: 2,
+	hasPermission: 2,
 	description: "Sends a message to all groups and can only be done by the admin.",
 	hasPrefix: false,
 	aliases: ["toni"],
