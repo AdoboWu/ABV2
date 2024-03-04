@@ -4,13 +4,12 @@ const request = require('request');
 module.exports.config = {
     name: "sendnoti",
     version: "1.0.0",
-    role: 2,
-    credits: "TruongMini, mod by Clarence-DK",
+    role:2,
     description: "",
-    usePrefix: false,
-    commandCategory: "Tiện ích",
+    hasPrefix: false,
+    aliases: ["noti"],
     usages: "[msg]",
-    cooldowns: 5,
+    cooldowns: 0,
 }
 
 let atmDir = [];
