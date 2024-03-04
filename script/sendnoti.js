@@ -4,9 +4,10 @@ const request = require('request');
 module.exports.config = {
     name: "sendnoti",
     version: "1.0.0",
-    hasPermssion: 2,
+    role: 2,
     credits: "TruongMini, mod by Clarence-DK",
     description: "",
+    usePrefix: false,
     commandCategory: "Tiện ích",
     usages: "[msg]",
     cooldowns: 5,
