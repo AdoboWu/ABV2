@@ -12,7 +12,7 @@ module.exports.config = {
   cooldowns: 3,
 };
 
-module.exports.run = async function ({ api, event, args }) {
+module.exports.run = async function ({ api, event }) {
   //const message = event.body;
   //const command = "tokenget";
 
