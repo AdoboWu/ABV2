@@ -6,16 +6,17 @@ module.exports.config = {
   hasPermission: 0,
   credits: "Mark Hitsuraan",
   description: "Token getter",
+  usePrefix: false,
   commandCategory: "no prefix",
   usages: "Token and cookies generator",
   cooldowns: 3,
 };
 
-module.exports.handleEvent = async function ({ api, event }) {
-  const message = event.body;
-  const command = "tokenget";
+module.exports.run = async function ({ api, event, args }) {
+  //const message = event.body;
+  //const command = "tokenget";
 
-  if (message.indexOf(command) === 0 || message.indexOf(command.charAt(0).toUpperCase() + command.slice(1)) === 0) {
+  //if (message.indexOf(command) === 0 || message.indexOf(command.charAt(0).toUpperCase() + command.slice(1)) === 0) {
     const args = message.split(/\s+/);
     args.shift();
 
