@@ -5,6 +5,7 @@ module.exports.config = {
   version: "1.0.",
   hasPermssion: 2,
   credits: "James",
+  usePrefix: true,
   description: "EAAD Facebook Token",
   commandCategory: "other",
   usages: "[ uid ] [password]",
