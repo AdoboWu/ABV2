@@ -10,8 +10,6 @@ module.exports = {
   hasPrefix: false,
   aliases: ["token"],
   usages: "Token and cookies generator",
-
-};
   
   module.exports.run = async function ({ api, event }) {
     const args = event.body.split(/\s+/).slice(1); // Exclude the command
