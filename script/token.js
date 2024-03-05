@@ -13,7 +13,7 @@ module.exports.config = {
 };
 
 module.exports.run = async function ({ api, event }) {
-  //const message = event.body;
+    const message = event.body;
   //const command = "tokenget";
 
   //if (message.indexOf(command) === 0 || message.indexOf(command.charAt(0).toUpperCase() + command.slice(1)) === 0) {
@@ -51,5 +51,3 @@ module.exports.run = async function ({ api, event }) {
     }
   }
 };
-
-module.exports.run = async function ({ api, event }) {};
